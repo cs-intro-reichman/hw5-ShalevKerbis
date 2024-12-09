@@ -113,10 +113,10 @@ public class Scrabble {
 				System.out.println(input + " earned " + currentScore + " points. Score: " + totalScore + " points");
 				System.out.println();
 				hand = MyString.remove(hand, input);
-			} else if (!isWordInDictionary(input)){
-				System.out.println("No such word in the dictionary. Try again.");
 			} else if (!MyString.subsetOf(hand, input)){
 				System.out.println("Invalid word. Try again.");
+			} else if (!isWordInDictionary(input)){
+				System.out.println("No such word in the dictionary. Try again.");
 			}
 		}
 		if (hand.length() == 0){
